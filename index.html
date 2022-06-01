@@ -4,25 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="app.js" defer></script>
+
     <title>Forest of Books</title>
   </head>
-  <body>
-    <header>
-      <div></div>
-      <div></div>
-    </header>
-    <main class="bookshelf">
-      <section class="shelf">
-        <div class="wood-cover">
-          <h1></h1>
+  <body class="flex flex-col ver-center">
+    <header class="flex flex-between">
+      <div class="lastbook-desc flex flex-col hor-center">
+        <h4>Last Read</h4>
+        <h2>Yuru Camp</h2>
+        <p>
+          I have read a lot and pretty good. I'm hoping that this chapter will
+          animated soon
+        </p>
+        <div>
+          <button
+            class="lastbook-button button-blue button-noborder text-white"
+          >
+            Go to the shelf
+          </button>
+          <button class="lastbook-button button-border-blue button-white">
+            Add book
+          </button>
         </div>
-        <div class="books">
-          <div class="book"></div>
+      </div>
+      <div class="lastbook-image">
+        <img src="https://images2.alphacoders.com/925/thumb-1920-925917.png" />
+      </div>
+    </header>
+    <main class="bookshelf flex flex-col">
+      <section class="shelf">
+        <div class="wood-cover flex ver-center hor-center">
+          <h1>Uncomplete</h1>
+        </div>
+        <div class="books flex">
+          <div class="book">
+            <img />
+            <p></p>
+          </div>
+          <div class="book">
+            <img />
+            <p></p>
+          </div>
+          <div class="book">
+            <img />
+            <p></p>
+          </div>
+          <div class="book">
+            <img />
+            <p></p>
+          </div>
         </div>
       </section>
+
       <section class="shelf">
-        <div class="wood-cover">
-          <h1></h1>
+        <div class="wood-cover wood-cover flex ver-center hor-center">
+          <h1>Complete</h1>
         </div>
         <div class="books">
           <div class="book"></div>

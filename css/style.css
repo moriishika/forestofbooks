@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  /* color: white; */
+  box-sizing: border-box;
+  accent-color: pink;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: pink;
+  border-radius: 10px;
+  width: 1px;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.ver-center {
+  align-items: center;
+}
+
+.hor-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.button-blue {
+  background-color: #438ff3;
+}
+
+.button-red {
+  background-color: #f34943;
+}
+
+.button-noborder {
+  border: none;
+}
+
+.button-border-red {
+  border: 1px solid#de2828;
+}
+
+.button-border-blue {
+  border: 1px solid#2877de;
+}
+
+.button-white {
+  background-color: white;
+}
+
+.text-normal {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-semibold {
+  font-weight: 600;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-extrabold {
+  font-weight: 800;
+}
+
+header {
+  width: 90%;
+  background-color: pink;
+  margin: 3rem;
+  border-radius: 30px;
+}
+
+.lastbook-button {
+  padding: 8px 15px 8px 15px;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-right: 8px;
+  font-weight: 600;
+}
+
+.lastbook-desc {
+  width: 50%;
+  gap: 15px;
+  padding: 40px;
+}
+
+.lastbook-desc h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.lastbook-desc h2 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.lastbook-desc p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.lastbook-image {
+  width: 50%;
+  padding: 40px;
+}
+
+.lastbook-image img {
+  width: 100%;
+  border-radius: 40px;
+  filter: brightness(0.8);
+}
+
+.bookshelf {
+  /* background-color: yellow; */
+  width: 90%;
+  gap: 30px;
+  padding: 30px;
+}
+
+.shelf {
+  width: 100%;
+  /* background-color: pink; */
+  border: 4px solid pink;
+  border-radius: 25px;
+  position: relative;
+}
+.wood-cover {
+  width: 300px;
+  position: absolute;
+  background-color: pink;
+  height: 100%;
+  border-radius: 20px 0px 0px 20px;
+}
+
+.wood-cover h1{
+    font-size: 2rem;
+}
+.books {
+  /* background-color: #2877de; */
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+}
+.book {
+  width: 110px;
+  height: 120px;
+  background-color: #de2828;
+  margin: 10px 0 10px 0;
+}
