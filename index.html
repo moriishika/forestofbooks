@@ -14,11 +14,12 @@
 
     <link rel="stylesheet" href="css/style.css" />
 
-    <script src="app.js" defer></script>
+    <script src="javascript/app.js" defer></script>
 
     <title>Forest of Books</title>
   </head>
   <body class="flex flex-col ver-center">
+    <h1 class="forestofbooks">Forest of Books🌲</h1>
     <header class="flex flex-between">
       <div class="lastbook-desc flex flex-col hor-center">
         <h4>Last Read</h4>
@@ -42,40 +43,67 @@
         <img src="https://images2.alphacoders.com/925/thumb-1920-925917.png" />
       </div>
     </header>
-    <main class="bookshelf flex flex-col">
-      <section class="shelf">
-        <div class="wood-cover flex ver-center hor-center">
-          <h1>Uncomplete</h1>
-        </div>
-        <div class="books flex">
-          <div class="book">
-            <img />
-            <p></p>
-          </div>
-          <div class="book">
-            <img />
-            <p></p>
-          </div>
-          <div class="book">
-            <img />
-            <p></p>
-          </div>
-          <div class="book">
-            <img />
-            <p></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="shelf">
-        <div class="wood-cover wood-cover flex ver-center hor-center">
-          <h1>Complete</h1>
-        </div>
-        <div class="books">
-          <div class="book"></div>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
+    <div class="bookListHeader flex flex-between ver-center hor-center">
+      <h1>Book list</h1>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="25"
+          viewBox="0 0 66 38"
+        >
+          <g id="Group_3" data-name="Group 3" transform="translate(-1656 -612)">
+            <line
+              id="Line_7"
+              data-name="Line 7"
+              x2="66"
+              transform="translate(1656 647)"
+              fill="none"
+              stroke="#000"
+              stroke-width="6"
+            />
+            <line
+              id="Line_8"
+              data-name="Line 8"
+              x2="47"
+              transform="translate(1675 631)"
+              fill="none"
+              stroke="#000"
+              stroke-width="6"
+            />
+            <line
+              id="Line_9"
+              data-name="Line 9"
+              x2="33"
+              transform="translate(1689 615)"
+              fill="none"
+              stroke="#000"
+              stroke-width="6"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <main class="bookshelf bookshelf-complete flex ver-center hor-center"></main>
+    <div class="bookbox-container flex flex-col ver-center hor-center" id="bookbox">
+      <h1>Add book here!</h1>
+      <div class="box bookbox">
+        <form class="flex flex-col bookform" >
+          <img src="https://images2.alphacoders.com/925/thumb-1920-925917.png" class="radius-medium" id="imagePreview"></img>
+          <input type="text" name="image" id="image" placeholder="Image url"  class="border-bold-pink radius-medium" required/>
+          <input type="text" name="title" id="bookTitle" placeholder="EX : The old man and the sea" id="bookTitle" class="border-bold-pink radius-medium" required/>
+          <textarea name="bookdesc" id="bookDesc" cols="30" rows="10" id="bookDesc" placeholder="Book Description" class="border-bold-pink radius-medium" required></textarea>
+          <select name="readstatus" id="bookStatus" id="bookStatus" class="border-bold-pink radius-medium" required>
+            <option value="currentread">Currently read</option>
+            <option value="complete">Complete</option>
+            <option value="incomplete">Incomplete</option>
+          </select>
+          <button class="button-blue button-noborder book-button text-bold" id="saveButton">Save</button>
+          <button class="button-green button-noborder book-button text-bold" id="clearButton">Clear</button>
+          <!-- <button class="button-border-red button-white book-button">Cancel</button> -->
+        </form>
+      </div>
+    </div>
+    <footer class="text-bold">Copyright ©2022 | Created by Nox Vanitas</footer>
   </body>
 </html>

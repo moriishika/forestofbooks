@@ -7,8 +7,13 @@
   accent-color: pink;
 }
 
+input {
+  accent-color: pink;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -16,15 +21,17 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: pink;
+  background-color: rgb(220, 140, 153);
   border-radius: 10px;
   width: 1px;
+  height: 1px;
 }
 
 html,
 body {
   width: 100%;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .text-white {
@@ -67,6 +74,14 @@ body {
   background-color: #f34943;
 }
 
+.button-green {
+  background-color: #43f366;
+}
+
+.button-yellow {
+  background-color: #f3f043;
+}
+
 .button-noborder {
   border: none;
 }
@@ -77,6 +92,14 @@ body {
 
 .button-border-blue {
   border: 1px solid#2877de;
+}
+
+.border-bold-pink {
+  border: 2px solid rgb(223, 104, 124);
+}
+
+.radius-medium {
+  border-radius: 10px;
 }
 
 .button-white {
@@ -103,11 +126,35 @@ body {
   font-weight: 800;
 }
 
+.modal {
+  width: 100%;
+  min-height: 100%;
+}
+
+.box {
+  padding: 20px;
+  background-color: pink;
+  border-radius: 10px;
+}
+
+.bookform {
+  gap: 10px;
+}
+
 header {
   width: 90%;
   background-color: pink;
   margin: 3rem;
   border-radius: 30px;
+}
+
+.forestofbooks {
+  padding: 20px;
+  text-align: left;
+  display: block;
+  width: 90%;
+  font-size: 5rem;
+  filter: drop-shadow(0 0 0.6rem pink);
 }
 
 .lastbook-button {
@@ -150,40 +197,110 @@ header {
   filter: brightness(0.8);
 }
 
+.bookListHeader {
+  width: 90%;
+  /* box-shadow: 0px 10px 20px rgba(231, 137, 153, 0.626); */
+  background: pink;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 .bookshelf {
-  /* background-color: yellow; */
+  background-color: rgb(242, 232, 233);
   width: 90%;
   gap: 30px;
   padding: 30px;
+  flex-wrap: wrap;
+  height: 800px;
+  overflow-x: scroll;
+  border-radius: 20px;
 }
 
-.shelf {
-  width: 100%;
-  /* background-color: pink; */
-  border: 4px solid pink;
-  border-radius: 25px;
-  position: relative;
-}
-.wood-cover {
-  width: 300px;
-  position: absolute;
-  background-color: pink;
-  height: 100%;
-  border-radius: 20px 0px 0px 20px;
-}
-
-.wood-cover h1{
-    font-size: 2rem;
-}
 .books {
   /* background-color: #2877de; */
-  gap: 10px;
   width: 100%;
   padding: 10px;
 }
+
 .book {
-  width: 110px;
-  height: 120px;
-  background-color: #de2828;
-  margin: 10px 0 10px 0;
+  width: 25%;
+  height: 350px;
+  border-radius: 20px;
+  background-color: pink;
+  margin: 10px 10px 10px 0;
+  padding: 20px 5px 20px 5px;
+  gap : 15px;
+}
+
+.book-img {
+  width: 198px;
+  height: 112px;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.book h1{
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.book p {
+  width: 100px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.book a {
+  text-decoration: none;
+}
+
+.book-buttons {
+  gap : 5px;
+}
+
+.book-button {
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.sort-button {
+  width: 200px;
+  height: 200px;
+}
+
+.bookbox-container h1 {
+  margin: 20px;
+}
+
+.bookform img {
+  max-width: 500px;
+}
+
+.bookform input {
+  /* width: 300px; */
+  padding: 10px;
+}
+
+.bookform textarea {
+  padding: 10px;
+}
+
+.bookform select {
+  padding: 10px;
+}
+
+.book-button {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+footer {
+  padding: 60px;
 }
