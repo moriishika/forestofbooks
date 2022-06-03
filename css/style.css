@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  /* color: white; */
   box-sizing: border-box;
   accent-color: pink;
 }
@@ -126,31 +125,6 @@ body {
   font-weight: 800;
 }
 
-.modal {
-  width: 100%;
-  min-height: 100%;
-}
-
-.modal-container {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 100;
-  visibility: hidden;
-}
-
-.sortModal{
-  width: 280px;
-  padding: 20px;
-  background-color: white;
-}
-
-.sort-button {
-  width: 100%;
-  height: 30px;
-  margin-top: 10px;
-}
-
 
 .box {
   padding: 20px;
@@ -221,7 +195,6 @@ header {
 
 .bookListHeader {
   width: 90%;
-  /* box-shadow: 0px 10px 20px rgba(231, 137, 153, 0.626); */
   background: pink;
   padding: 10px;
   border-radius: 10px;
@@ -244,7 +217,6 @@ header {
 }
 
 .books {
-  /* background-color: #2877de; */
   width: 100%;
   padding: 10px;
 }
@@ -307,7 +279,6 @@ header {
 }
 
 .bookform input {
-  /* width: 300px; */
   padding: 10px;
 }
 

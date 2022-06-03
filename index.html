@@ -19,81 +19,14 @@
     <title>Forest of Books</title>
   </head>
   <body class="flex flex-col ver-center">
-    <div class="modal-container flex ver-center hor-center">
-      <div class="sortModal flex flex-col">
-        <h2>Sort the books</h2>
-          <button class="sort-button" onclick="sortBooks('complete')">Sort by Complete</button>
-          <button class="sort-button" onclick="sortBooks('incomplete')">Sort by Incomplete</button>
-          <button class="sort-button" onclick="sortBooks('currentread')">Sort by Current Read</button>
-          <button class="sort-button" onclick="sortBooks('complete')">Close</button>
-      </div>
-    </div>
     <h1 class="forestofbooks">Forest of Books🌲</h1>
-    <header class="flex flex-between">
-      <div class="lastbook-desc flex flex-col hor-center">
-        <h4>Last Read</h4>
-        <h2>Yuru Camp</h2>
-        <p>
-          I have read a lot and pretty good. I'm hoping that this chapter will
-          animated soon
-        </p>
-        <div>
-          <a
-            class="lastbook-button button-blue button-noborder text-white"
-            href="#bookshelf"
-          >
-            Go to the shelf
-          </a>
-          <a class="lastbook-button button-border-blue button-white" href="#bookbox">
-            Add book
-          </a>
-        </div>
-      </div>
-      <div class="lastbook-image">
-        <img src="https://images2.alphacoders.com/925/thumb-1920-925917.png" />
-      </div>
-    </header>
+    <header class="flex flex-between"></header>
     <div class="bookListHeader flex flex-between ver-center hor-center" id="bookshelf">
       <h1>Book list</h1>
-      <!-- <div class="sortButton">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="50"
-          height="25"
-          viewBox="0 0 66 38"
-        >
-          <g id="Group_3" data-name="Group 3" transform="translate(-1656 -612)">
-            <line
-              id="Line_7"
-              data-name="Line 7"
-              x2="66"
-              transform="translate(1656 647)"
-              fill="none"
-              stroke="#000"
-              stroke-width="6"
-            />
-            <line
-              id="Line_8"
-              data-name="Line 8"
-              x2="47"
-              transform="translate(1675 631)"
-              fill="none"
-              stroke="#000"
-              stroke-width="6"
-            />
-            <line
-              id="Line_9"
-              data-name="Line 9"
-              x2="33"
-              transform="translate(1689 615)"
-              fill="none"
-              stroke="#000"
-              stroke-width="6"
-            />
-          </g>
-        </svg>
-      </div> -->
     </div>
+    <h1 class="booklist-title">Search Book</h1>
+    <input type="text" id="searchBook"> 
+    <main class="bookshelf bookshelf-complete flex ver-center hor-center" id="incompleteshelf"></main>
     <h1 class="booklist-title">Current Read Books List</h1>
     <main class="bookshelf bookshelf-complete flex ver-center hor-center" id="currentread"></main>
     <h1 class="booklist-title">Completed Books List</h1>
@@ -115,7 +48,6 @@
           </select>
           <button class="button-blue button-noborder book-button text-bold" id="saveButton">Save</button>
           <button class="button-green button-noborder book-button text-bold" id="clearButton">Clear</button>
-          <!-- <button class="button-border-red button-white book-button">Cancel</button> -->
         </form>
       </div>
     </div>
