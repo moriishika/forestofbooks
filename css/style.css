@@ -131,6 +131,27 @@ body {
   min-height: 100%;
 }
 
+.modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  visibility: hidden;
+}
+
+.sortModal{
+  width: 280px;
+  padding: 20px;
+  background-color: white;
+}
+
+.sort-button {
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+}
+
+
 .box {
   padding: 20px;
   background-color: pink;
@@ -163,6 +184,7 @@ header {
   border-radius: 10px;
   margin-right: 8px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 .lastbook-desc {
@@ -214,6 +236,11 @@ header {
   height: 800px;
   overflow-x: scroll;
   border-radius: 20px;
+  margin-top: 20px;
+}
+
+.booklist-title {
+  margin-top: 20px;
 }
 
 .books {
@@ -269,10 +296,7 @@ header {
   padding: 10px;
 }
 
-.sort-button {
-  width: 200px;
-  height: 200px;
-}
+
 
 .bookbox-container h1 {
   margin: 20px;

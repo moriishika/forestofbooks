@@ -8,6 +8,9 @@ const saveButton = document.getElementById("saveButton");
 const clearButton = document.getElementById("clearButton");
 const imageInput = document.getElementById("image");
 const bookContainers = document.querySelectorAll(".bookshelf");
+const sortButton = document.querySelectorAll(".sort-button");
+const modalContainer = document.querySelectorAll(".modal-container");
+const sortOpener = document.querySelectorAll(".sortButton");
 
 let books = [];
 let isAdd = true;
@@ -38,11 +41,42 @@ if (typeof Storage !== "undefined") {
       return;
     } else {
       books = JSON.parse(localStorage.getItem(localStorageKey));
+      // console.log(books);
+
+      // let sortedBooks = [];
+
+      // books.forEach((book) => {
+      //   if (book.readStatus === "complete") {
+      //     bookContainers[0].appendChild(createBook(i));
+      //   }
+      //   if (book.readStatus === "incomplete") {
+      //     bookContainers[1].appendChild(createBook(i));
+
+      //   }
+
+      //   if (book.readStatus === "currentread") {
+      //     bookContainers[2].appendChild(createBook(i));
+      //   }
+      // });
+
+      // books = sortedBooks;
     }
 
     bookContainers[0].innerHTML = "";
+    bookContainers[1].innerHTML = "";
+    bookContainers[2].innerHTML = "";
+
     for (let i = 0; i < books.length; i++) {
-      bookContainers[0].appendChild(createBook(i));
+      if (books[i].readStatus === "complete") {
+        bookContainers[1].appendChild(createBook(i));
+      }
+      if (books[i].readStatus === "incomplete") {
+        bookContainers[2].appendChild(createBook(i));
+      }
+
+      if (books[i].readStatus === "currentread") {
+        bookContainers[0].appendChild(createBook(i));
+      }
     }
   };
 
@@ -67,13 +101,21 @@ if (typeof Storage !== "undefined") {
       desc: bookDesc.value,
       readStatus: bookStatus.value,
     };
+
     books = [...books, newBooks];
 
     if (!isAdd) {
       books.splice(upperBookId, 1);
       isAdd = true;
+      imagePreview.src = "https://images2.alphacoders.com/925/thumb-1920-925917.png"
+      imageInput.value = "";
+      bookTitle.value = "";
+      bookDesc.value = "";
+      bookStatus.value = "currentread";
     }
     localStorage.setItem(localStorageKey, JSON.stringify(books));
+    console.log("updated");
+    console.log(books);
     renderBooks();
   };
 
@@ -83,9 +125,18 @@ if (typeof Storage !== "undefined") {
     renderBooks();
   }
 
+  // sortOpener[0].onclick = () => {
+  //   modalContainer[0].style.visibility = "visible";
+  // };
+
+  sortButton[3].onclick = () => {
+    modalContainer[0].style.visibility = "hidden";
+  };
+
   saveButton.onclick = saveBook;
   clearButton.onclick = (e) => {
     e.preventDefault();
+    imagePreview.src= "https://images2.alphacoders.com/925/thumb-1920-925917.png"
     imageInput.value = "";
     bookTitle.value = "";
     bookDesc.value = "";
@@ -150,4 +201,31 @@ if (typeof Storage !== "undefined") {
 // } else {
 //   books = JSON.parse(localStorage.getItem(localStorageKey));
 //   renderBooks();
+// }
+
+// function sortBooks(sortOption) {
+//   let sortedBooks = [];
+//   books.forEach((book) => {
+//     if (sortOption === "complete" && book.readStatus === "complete") {
+//       sortedBooks.unshift(book);
+//     }
+
+//     if (sortOption === "incomplete" && book.readStatus === "incomplete") {
+//       sortedBooks.unshift(book);
+//     }
+
+//     if (sortOption === "currentread" && book.readStatus === "currentread") {
+//       sortedBooks.unshift(book);
+//     }
+
+//     if (book.readStatus !== sortOption) {
+//       sortedBooks.push(book);
+//     }
+//   });
+//   books = sortedBooks;
+//   console.log(books);
+//   bookContainers[0].innerHTML = "";
+//   for (let i = 0; i < books.length; i++) {
+//     bookContainers[0].appendChild(createBook(i));
+//   }
 // }
