@@ -23,6 +23,7 @@ let lastBook = {
   desc: "by adding your last read book you can remember it since you got a lot of books",
 };
 
+//
 const lastReadBook = (book) => {
   const { imageUrl, title, desc } = book;
   headerElement[0].innerHTML = `
@@ -32,7 +33,7 @@ const lastReadBook = (book) => {
         <p>
           ${desc}
         </p>
-        <div>
+        <div class="flex flex-wrap lastbook-buttons">
           <a
             class="lastbook-button button-blue button-noborder text-white"
             href="#bookshelf"
@@ -44,7 +45,7 @@ const lastReadBook = (book) => {
           </a>
         </div>
       </div>
-      <div class="lastbook-image">
+      <div class="lastbook-image flex ver-center hor-center">
         <img src="${imageUrl}" />
       </div>
  `;
@@ -88,11 +89,8 @@ if (typeof Storage !== "undefined") {
     bookContainers[0].innerHTML = "";
 
     // check the read status on each book and placed to the bookshelf accordingly
-    console.log(books);
     if (books !== null) {
-      console.log(books.length);
       for (let i = 0; i < books.length; i++) {
-        console.log(books)
         if (books[i].readStatus === "complete") {
           bookContainers[2].appendChild(createBook(i));
         }
@@ -101,12 +99,11 @@ if (typeof Storage !== "undefined") {
           bookContainers[3].appendChild(createBook(i));
         }
         if (books[i].readStatus === "currentread") {
-          console.log("masuk read");
           bookContainers[1].appendChild(createBook(i));
           lastBook = books[i];
         }
 
-        if (books[i].title.includes(e.currentTarget ? e.currentTarget.value : e.value)) {
+        if (books[i].title.toLowerCase().includes(e.currentTarget ? e.currentTarget.value.toLowerCase() : e.value.toLowerCase())) {
           bookContainers[0].appendChild(createBook(i));
         }
       }
@@ -157,7 +154,6 @@ if (typeof Storage !== "undefined") {
     }
 
     localStorage.setItem(localStorageKey, JSON.stringify(books));
-    console.log(books);
     renderBooks(searchInput);
   };
 
